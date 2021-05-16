@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+visor {
+    background: darkgray;
+    display: flex;
+    justify-content: center;
+}
+
+.contenido {
+    width: 100%;
+    max-width: auto;
+    min-width: auto;
+    background: darkgray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.datos {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
