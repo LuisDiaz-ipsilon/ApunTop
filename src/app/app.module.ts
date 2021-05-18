@@ -8,9 +8,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { VisorComponent } from './components/visor/visor.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, VisorComponent],
+  declarations: [AppComponent, NavbarComponent, VisorComponent, LoadingComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

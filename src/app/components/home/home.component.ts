@@ -1,14 +1,40 @@
 import { Component, OnInit } from '@angular/core';
+import { GoogleBooksService } from '../../services/api/google-books.service';
+
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-
+  templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  items: any[]= [];
 
-  ngOnInit() {}
+  loading: boolean;
+
+  error: boolean=false;
+  mensajeError: string;
+
+  constructor( private gglBooks: GoogleBooksService) { 
+
+    this.loading= true;
+
+    /*this.gglBooks.getBooksHome()
+      .subscribe((data: any)=>{
+        console.log(data);
+        this.items= data;
+      }, (error)=> {
+        this.error=true;
+        console.log(error.error.error.message);
+        this.mensajeError=error.error.error.message;
+      } );
+      this.loading= false;*/
+    }
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    
+  }
 
 }
