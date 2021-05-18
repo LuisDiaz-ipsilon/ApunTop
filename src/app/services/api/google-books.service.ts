@@ -8,7 +8,7 @@ export class GoogleBooksService {
   
   constructor(private http: HttpClient) { }
 
-  getQuery(query: string){
+  /*getQuery(query: string){
     const URL=`https://www.googleapis.com/books/v1/${query}`;
 
     const headers= new HttpHeaders({
@@ -25,7 +25,7 @@ export class GoogleBooksService {
 
   getBookForName(termino: string){
     return this.getQuery(`volumes?q=${termino}&filter=free-ebooks`);
-  }
+  }*/
   
 
 }

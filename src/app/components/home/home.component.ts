@@ -8,16 +8,16 @@ import { GoogleBooksService } from '../../services/api/google-books.service';
 })
 export class HomeComponent implements OnInit {
 
-  items: any[]= [];
+  items: any[] = [];
 
   loading: boolean;
 
-  error: boolean=false;
+  error: boolean = false;
   mensajeError: string;
 
-  constructor( private gglBooks: GoogleBooksService) { 
+  constructor(private gglBooks: GoogleBooksService) {
 
-    this.loading= true;
+    this.loading = true;
 
     /*this.gglBooks.getBooksHome()
       .subscribe((data: any)=>{
@@ -29,12 +29,8 @@ export class HomeComponent implements OnInit {
         this.mensajeError=error.error.error.message;
       } );
       this.loading= false;*/
-    }
-
-  ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    
   }
+
+  ngOnInit(): void { }
 
 }
