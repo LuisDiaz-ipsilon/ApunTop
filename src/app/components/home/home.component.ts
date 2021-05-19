@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GoogleBooksService } from '../../services/api/google-books.service';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html'
