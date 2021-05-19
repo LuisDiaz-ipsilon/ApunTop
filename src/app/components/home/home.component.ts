@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   loading: boolean;
 
-  error: boolean = false;
+  error: boolean = true;
   mensajeError: string;
 
   constructor(private gglBooks: GoogleBooksService) {
