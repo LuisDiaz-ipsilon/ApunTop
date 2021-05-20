@@ -1,13 +1,12 @@
-<div>
-    <p>si trabajo el home</p>
-    <app-loading *ngIf="loading"></app-loading>
-</div>
+<app-loading *ngIf="loading">
+</app-loading>
 
-<!--div *ngIf="error" class="alert alert-danger animated fadeIn">
+
+<div *ngIf="error" class="alert alert-danger animated fadeIn">
     <h3>Error</h3>
     <p>
         {{mensajeError}}
     </p>
-</div-->
+</div>
 
-<!--app-cards [items]="items"></app-cards-->
+<app-cards [items]="items" *ngIf="!loading"></app-cards>

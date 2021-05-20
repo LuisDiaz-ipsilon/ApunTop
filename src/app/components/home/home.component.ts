@@ -18,16 +18,17 @@ export class HomeComponent implements OnInit {
 
     this.loading = true;
 
-    /*this.gglBooks.getBooksHome()
+    this.gglBooks.getBooksHome()
       .subscribe((data: any)=>{
-        console.log(data);
-        this.items= data;
+        console.log(data.items);
+        this.items= data.items;//se agrega el .items para solo mostrar la informacion de los libros.
       }, (error)=> {
         this.error=true;
         console.log(error.error.error.message);
         this.mensajeError=error.error.error.message;
       } );
-      this.loading= false;*/
+      this.loading= false;
+      this.error= false;
   }
 
   ngOnInit(): void { }

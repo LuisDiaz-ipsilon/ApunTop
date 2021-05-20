@@ -12,9 +12,10 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { GoogleBooksService } from './services/api/google-books.service';
 import { HomeComponent } from './components/home/home.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, VisorComponent, LoadingComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, VisorComponent, LoadingComponent, CardsComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [ GoogleBooksService, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
