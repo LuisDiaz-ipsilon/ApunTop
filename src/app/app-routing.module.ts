@@ -10,7 +10,11 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'navbar', component: NavbarComponent },
-  { path: 'visor', component: VisorComponent }
+  { path: 'visor', component: VisorComponent },
+  /*{
+    path: '',
+    loadChildren: () => import('./pages/log/log.module').then( m => m.LogPageModule)
+  }*/
 ];
 @NgModule({
   imports: [

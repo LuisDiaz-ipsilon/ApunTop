@@ -10,10 +10,10 @@ export class GoogleBooksService {
   constructor(private http: HttpClient) { }
 
   getQuery(query: string){
-    const URL=`https://www.googleapis.com/books/v1/${query}&key=AIzaSyBiaMoXJFkpHbDkL7dSPeyulD_0LfILEy4`;
+    const URL=`https://www.googleapis.com/books/v1/${query}&key=AIzaSyD1o07_NcpvHfLo52PDn8g0qG5ghxSAEoA`;
 
     const headers= new HttpHeaders({
-      'key': '&key=AIzaSyBiaMoXJFkpHbDkL7dSPeyulD_0LfILEy4'
+      'key': '&key=AIzaSyD1o07_NcpvHfLo52PDn8g0qG5ghxSAEoA'
     });
     console.log(URL);
     return this.http.get(URL);

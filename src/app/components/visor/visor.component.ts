@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { computeStackId } from '@ionic/angular/directives/navigation/stack-utils';
 import { GoogleBooksService } from '../../services/api/google-books.service';
 
 @Component({
@@ -17,17 +18,14 @@ export class VisorComponent {
     this.loading=true;
     this.router.params.subscribe(params => {
       this.getBook(params['id']);
+      this.book=params;
+      this.loading= false;
+      console.log(this.book);
     })
+    
   }
 
-  getBook(id: string){
-    console.log(id);
-    console.log("este es del visor");
-    this.gglBooks.getBookForId(id);
-  }
-
-  /*
-  getArtista(id: string){
+  /*getArtista(id: string){
 
     this.spotify.getArtista(id).subscribe(artista=> {
       console.log(artista);
@@ -35,6 +33,11 @@ export class VisorComponent {
       this.loading=false;
     })
 
+  } */
+
+  getBook(id: string){
+    this.gglBooks.getBookForId(id);
   }
-  */
+
+
 }
