@@ -1,4 +1,5 @@
-<div *ngFor="let item of items">
+    <div *ngFor="let item of items">
+        
     <div class="card" (click)="verLibro(item)">
         <img [src]="item.volumeInfo.imageLinks.smallThumbnail" class="card-img-top imgBookHome" alt="..." />
         <div class="card-body">
@@ -8,7 +9,6 @@
     </div>
     <hr>
 </div>
-
 <!--div class="card-columns m-5 animated fadeIn">
   <div (click)="verArtista(item)" *ngFor="let item of items" class="card puntero" style="width: 18rem;">
       <img [src]="item.images | noimage" class="card-img-top" alt="...">

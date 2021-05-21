@@ -1,5 +1,10 @@
-<app-navbar></app-navbar>
-
-<div class="container m-5">
-    <router-outlet></router-outlet>
-</div>
+<ion-app>
+    <ion-router-outlet main></ion-router-outlet>
+</ion-app>
+<app-navbar > </app-navbar >
+   <ion-item (click)="onLogout()">
+        <ion-label>Salir</ion-label>
+       </ion-item> 
+<div  class = " contenedor m-5 " >
+    <salida-enrutador> </salida-enrutador >
+</div >

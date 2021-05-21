@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
+import {  LOCALE_ID } from '@angular/core';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
