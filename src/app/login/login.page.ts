@@ -1,3 +1,5 @@
+//Modificar el diseño del login agregando funcionalidades
+//Importamos int
 import { LoginService, LoginResponseData } from './login.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -6,14 +8,17 @@ import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 @Component({
- selector: 'app-login',
- templateUrl: './login.page.html',
- styleUrls: ['./login.page.scss'],
+ selector: 'app-login',// asignamos el tag de nuestro componente
+ templateUrl: './login.page.html',//Ponemos la estructura de nuestro componente
+ styleUrls: ['./login.page.scss'],//Cargamos los estilos que usará
 })
 
-export class LoginPage implements OnInit {
- isLoading: boolean = false;
+export class LoginPage implements OnInit {//Exportamos la clase, implement
+
+ //Declaramos una variable boleana
+  isLoading: boolean = false;
  isLoginMode: boolean = true;
+
  constructor(
  private loginService: LoginService,
  private router: Router,
@@ -44,7 +49,7 @@ export class LoginPage implements OnInit {
  buttons: ['OK']
  }).then(alertEl => alertEl.present());
  }
-
+//Verificaciones
  authenticate(email: string, password: string){
  this.isLoading = true;
  //this.loginService.login();
@@ -62,32 +67,28 @@ export class LoginPage implements OnInit {
  authObs = this.loginService.signup(email, password);
  }
  //this.loginService.signup(email, password).subscribe(response => {
- authObs.subscribe(response => {
- console.log(response);
+ authObs.subscribe(response => { console.log(response);
  this.isLoading = false;
  loadingEl.dismiss();
  this.router.navigateByUrl('home');
  },
  errorResponse => {
- this.isLoading = false;
- loadingEl.dismiss();
- const error = errorResponse.error.error.message;
- let mensaje ='Acceso incorrecto !';
- switch(error){
- case 'EMAIL_EXISTS':
- mensaje = 'Usuario ya existe !';
- break;
- case 'EMAIL_NOT_FOUND':
- mensaje = 'Usuario no existe !';
- break;
- case 'INVALID_PASSWORD':
- mensaje = 'Contraseña incorrecta !';
- break;
+  this.isLoading = false;
+    loadingEl.dismiss();
+  const error = errorResponse.error.error.message;
+  let mensaje ='Acceso incorrecto !';
+    switch(error){
+      case 'EMAIL_EXISTS': mensaje = 'Usuario ya existe !';
+          break;
+      case 'EMAIL_NOT_FOUND': mensaje = 'Usuario no existe !';
+          break;
+      case 'INVALID_PASSWORD': mensaje = 'Contraseña incorrecta !';
+          break;
  }
- console.log(mensaje);
- this.showAlert('Error', mensaje);
- });
+    console.log(mensaje);
+      this.showAlert('Error', mensaje);
+                });
 
- });
- }
+  });
+  }
 }

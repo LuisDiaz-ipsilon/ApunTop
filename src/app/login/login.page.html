@@ -14,7 +14,7 @@
     <ion-label position="oating">Correo Electronico</ion-label>
     <ion-input type="email" ngModel name="email" required email #emailCtrl="ngModel"></ion-input>
     </ion-item>
-   
+    <!--Muestra de correo y contraseña-->
     <ion-item *ngIf="!emailCtrl.valid && emailCtrl.touched" lines="none">
     <ion-label>Ingresa un correo valido</ion-label>
     </ion-item>
@@ -37,7 +37,7 @@
     (click)="onSwitchAuthMode()">
     {{isLoginMode ? 'Registrarse' : 'Ir a Inicio'}}
     </ion-button>
-  
+
     <ion-spinner color="primary" *ngIf="isLoading"></ion-spinner>
     <ion-button
    color="primary"
@@ -46,13 +46,12 @@
    type="submit"
    [disabled]="!myForm.valid">
    {{!isLoginMode ? 'Guardar' : 'Entrar'}}
-  </ion-button> 
-   
+  </ion-button>
+
     </ion-col>
     </ion-row>
     </ion-grid>
     </form>
-   
-   
+
+
    </ion-content>
-   
