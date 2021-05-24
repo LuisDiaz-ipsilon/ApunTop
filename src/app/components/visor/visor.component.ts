@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { computeStackId } from '@ionic/angular/directives/navigation/stack-utils';
 import { GoogleBooksService } from '../../services/api/google-books.service';
+//import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
 
 @Component({
   selector: 'app-visor',

@@ -1,12 +1,15 @@
-<app-loading *ngIf="loading">
-</app-loading>
+<hr>
+<hr>
+<!--div class="contenedor m-5"-->
+<app-loading *ngIf="loading"> </app-loading>
 
 <ion-content class="ion-padding">
-<div *ngIf="error" class="alert alert-danger animated fadeIn">
-    <h3>Error</h3>
-    <p>
-        {{mensajeError}}
-    </p>
-</div>
-<app-cards [items]="items" *ngIf="!loading"></app-cards>
+    <div *ngIf="error" class="alert alert-danger animated fadeIn">
+        <h3>Error</h3>
+        <p>
+            {{ mensajeError }}
+        </p>
+    </div>
+    <app-cards [items]="items" *ngIf="!loading"></app-cards>
 </ion-content>
+<!--/div-->
