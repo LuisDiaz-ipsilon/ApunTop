@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarComponent } from "../app/components/shared/navbar/navbar.component"; 
+import { NavbarComponent } from "../app/components/shared/navbar/navbar.component";
 import { LoginService } from './login/login.service';
 import { Router } from '@angular/router';
+import { LoginPage } from './login/login.page';
 
 
 @Component({
@@ -11,13 +12,28 @@ import { Router } from '@angular/router';
 })
 
 export class AppComponent {
+
+  showNavbar: boolean; //esta variable nos apoya para ocultar el navbar
+
   constructor(
-  private loginService: LoginService,
-  private router: Router
-  ) {}
-  onLogout(){
-  this.loginService.logout();
-  this.router.navigateByUrl('/login');
+    private loginService: LoginService,
+    private router: Router,
+
+  ) {
+    this.showNavbar=false;
   }
- }
- 
+
+  setShowNavbar(show: boolean){
+    this.showNavbar=show;
+  }
+
+  isShowNavbar(){
+     return this.showNavbar;
+  }
+
+  onLogout() {
+    this.loginService.logout();
+    console.log("click")
+    this.router.navigateByUrl('login');
+  }
+}
