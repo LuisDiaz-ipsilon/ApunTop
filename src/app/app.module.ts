@@ -23,9 +23,10 @@ import { DocumentViewerOptions, DocumentViewer } from '@ionic-native/document-vi
 import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 import { Platform } from '@ionic/angular';
 import { File } from "@ionic-native/file/ngx";
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, VisorComponent, LoadingComponent, CardsComponent, BuscarComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, VisorComponent, LoadingComponent, CardsComponent, BuscarComponent, ProfileComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [ SQLite,

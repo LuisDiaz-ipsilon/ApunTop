@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { VisorComponent } from './components/visor/visor.component';
 import { LoginGuard } from './login/login.guard';
 import { BuscarComponent } from './components/buscar/buscar.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'visor', component: VisorComponent },
   { path: 'buscador', component: BuscarComponent },
+  { path: 'profile', component: ProfileComponent }
   /*{
     path: '',
     loadChildren: () => import('./pages/log/log.module').then( m => m.LogPageModule)
