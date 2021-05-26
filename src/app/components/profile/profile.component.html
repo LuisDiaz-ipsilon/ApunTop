@@ -1,7 +1,10 @@
 <div class="container ion-padding">
     <div class="row align-items-start">
         <div class="col">
-            <img [src]="" class="card-img-top profileImg" alt="..." />
+            <div class="padding">
+                <img [src]="photo" class="card-img-top profileImg" alt="..." />
+                <button (click)="addPhotoToGallery()">Tomar foto</button>
+            </div>
             <hr /> Correo registrado: {{ user.correo }}
             <hr /> Contraseña: {{ user.pass }}
         </div>

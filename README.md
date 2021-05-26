@@ -2,11 +2,12 @@
 
 ## Colaboradores :green_book:
 
-- Marisol Villejas Rincon
-- Joshua Alejandro Hernandez Cardenas
-- Luis Fernando Flores Diaz
+- Marisol Villejas Rincon 1898149
+- Joshua Alejandro Hernandez Cardenas 1930693
+- Luis Fernando Flores Diaz 1821936
 
-## Manual de usuario: https://drive.google.com/file/d/1-qDFzq3w555EDr4ZJ9_5OLkUHp2pEdmO/view?usp=drivesdk
+## Manual de usuario: 
+    https://drive.google.com/file/d/1-qDFzq3w555EDr4ZJ9_5OLkUHp2pEdmO/view?usp=drivesdk
 
 ## Enfoque :black_nib:
 
