@@ -1,17 +1,20 @@
-## Colaboradores
+# ApunTop :mortar_board:
 
-#Marisol Villejas Rincon
-#Joshua Alejandro Hernandez Cardenas
-#Luis Fernando Flores Diaz
+## Colaboradores :green_book:
 
-##ApunTop:mortar_board:
+- Marisol Villejas Rincon
+- Joshua Alejandro Hernandez Cardenas
+- Luis Fernando Flores Diaz
+
+#Enfoque :black_nib:
 
 Al utilizar esta aplicación podrás tener acceso a los apuntes de
 otros colaboradores del mundo, además de poder subir tus propios
 apuntes y compartirlos con la comunidad y tener la posibilidad de
 obtener regalías por las visitas que obtengas con tus apuntes.
 
-:pager:
+
+# Principal :pager:
 
 Esta aplicación tendrá la habilidad de escanear documentos con la
 cámara del teléfono móvil, usar el visor de PDF para los libros y
