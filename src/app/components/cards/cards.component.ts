@@ -16,10 +16,14 @@ export class CardsComponent{
 
   
   //Esta funcion rutea a un componente en donde se abrira el libro
-  //Depues se carga en el componente el libro presionado
+  //Despues se carga en el componente el libro presionado
   verLibro(item: any){
     this.router.navigate(['/visor', item]);
     this.visor.downloadAndOpenPDF();
+  }
+
+  setBooksShow(itemsSearch: any[]){
+    this.items=itemsSearch;
   }
 
 }
