@@ -19,12 +19,17 @@ import { BuscarComponent } from './components/buscar/buscar.component';
 import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 import { SQLite } from '@ionic-native/sqlite/ngx';
 
+import { DocumentViewerOptions, DocumentViewer } from '@ionic-native/document-viewer/ngx';
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
+import { Platform } from '@ionic/angular';
+import { File } from "@ionic-native/file/ngx";
+
 @NgModule({
   declarations: [AppComponent, NavbarComponent, HomeComponent, VisorComponent, LoadingComponent, CardsComponent, BuscarComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [ SQLite,
-    SQLitePorter,
+    SQLitePorter, DocumentViewer, FileTransfer, Platform, File,
     GoogleBooksService, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

@@ -65,7 +65,8 @@ export class LoginService {
                 });
         });
     }
-
+    
+    //funciones requeridas por SQLite
     dbState() {
         return this.isDbReady.asObservable();
     }
@@ -114,7 +115,8 @@ export class LoginService {
           this.getUsers();
         });
     }
-
+    
+    //funciones requeridas para funcionamiento de firebase
     logout() {
         //this._usuarioLoggeado = false;
         this._usuario.next(null);

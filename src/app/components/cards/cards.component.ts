@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { VisorComponent } from '../visor/visor.component';
 
 @Component({
   selector: 'app-cards',
@@ -11,13 +12,14 @@ export class CardsComponent{
   @Input()
   items: any[]=[];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private visor: VisorComponent) { }
 
   
   //Esta funcion rutea a un componente en donde se abrira el libro
+  //Depues se carga en el componente el libro presionado
   verLibro(item: any){
-    //let book: string= item.id    
-    this.router.navigate(['/visor', item])
+    this.router.navigate(['/visor', item]);
+    this.visor.downloadAndOpenPDF();
   }
 
 }
