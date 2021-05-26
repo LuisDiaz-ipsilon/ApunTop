@@ -13,6 +13,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {}
 
+  openBuscar(){
+    this.router.navigateByUrl('buscador');
+  }
+
   onLogout() {
     this.loginService.logout();
     this.router.navigateByUrl('login');

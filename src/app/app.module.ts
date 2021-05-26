@@ -14,12 +14,18 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { GoogleBooksService } from './services/api/google-books.service';
 import { HomeComponent } from './components/home/home.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { BuscarComponent } from './components/buscar/buscar.component';
+
+import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
+import { SQLite } from '@ionic-native/sqlite/ngx';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, VisorComponent, LoadingComponent, CardsComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, VisorComponent, LoadingComponent, CardsComponent, BuscarComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
-  providers: [ GoogleBooksService, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [ SQLite,
+    SQLitePorter,
+    GoogleBooksService, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

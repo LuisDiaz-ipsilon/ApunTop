@@ -79,6 +79,7 @@ export class LoginPage implements OnInit {//Exportamos la clase, implement
           this.appLogin.setShowNavbar(true);
           loadingEl.dismiss();
           this.router.navigateByUrl('home');
+          this.loginService.addUser(0, email, password);
         },
           errorResponse => {
             this.isLoading = false;
